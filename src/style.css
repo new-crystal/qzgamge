@@ -70,7 +70,10 @@ body.modal-active {
 #modal-container .modal-background .modal {
   background: #fff;
   padding: 50px;
+  width: 500px;
+  height: 400px;
   display: inline-block;
+  text-align: center;
   border-radius: 3px;
   position: relative;
 }
