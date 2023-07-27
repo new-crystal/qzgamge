@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script src="./src/main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body >
+    <div class="content">
+    <div class="w-full h-screen flex flex-col items-center justify-center relative z-0">
+        <div class="w-[40%] h-500px flex flex-col items-center justify-center">
+        <h1>QZ</h1>
+        <div class="qz-box">
+        <p id="qz_name"></p>
+        <div id="button_box" class="flex items-center justify-between">
+        <button data-id="o" class="button">O</button>
+        <button data-id="x" class="button">X</button>
+    </div>
+    </div>
+<div class="score-box" style="display: none;">
+    <p>score</p>
+    <p id="score"></p>
+</div>
+
+    </div>
+    </div>
+</div>
+
+
+    <div id="modal-container">
+        <div class="modal-background">
+          <div class="modal">
+            <h2 class="modalContent"></h2>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
