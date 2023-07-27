@@ -9,6 +9,7 @@ const buttonBox = document.querySelector("#button_box");
 const buttons = document.querySelectorAll(".button")
 const modalContainer = document.querySelector("#modal-container")
 const modalContent = document.querySelector(".modalContent")
+const modal = document.querySelector(".modal")
 const qzBox = document.querySelector(".qz-box")
 const scoreBox = document.querySelector(".score-box")
 const scoreText = document.querySelector("#score")
@@ -30,13 +31,24 @@ buttons.forEach((button) => {
         modalContents(1,e)
     }
     modalContainer.removeAttribute('class');
-    modalContainer.classList.add("one");
+    modalContainer.classList.add("rotate-scale-up"); 
     
     content.removeAttribute('class');
     content.classList.add('content');
     
-    body.classList.add('modal-active');
-    qzName.innerText = qzList[1].qz;
+     body.classList.add('modal-active');
+
+     setTimeout(()=>{
+        modalContainer.classList.remove("rotate-scale-up");
+
+         qzName.innerText = qzList[1].qz;
+     },2000)
+     if(page === 3){
+        qzBox.style.display = "none";
+        scoreBox.style.display = "";
+        scoreText.innerText = score;
+    }
+
   });
 });
 
