@@ -12,6 +12,7 @@ const modalContent = document.querySelector(".modalContent")
 const qzBox = document.querySelector(".qz-box")
 const scoreBox = document.querySelector(".score-box")
 const scoreText = document.querySelector("#score")
+const homeButton = document.querySelector("#home")
 const body = document.body;
 let btnId;
 let score = 0;
@@ -59,3 +60,11 @@ if(page === 3){
     scoreText.innerText = score;
 }
 });
+
+homeButton.addEventListener("click",()=>{
+    qzBox.style.display = "";
+    scoreBox.style.display = "none"
+    qzName.innerText = qzList[0].qz;
+    page = 1;
+    score = 0;
+})
